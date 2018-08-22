@@ -2,7 +2,7 @@
 
 A series of traditional code katas to review and iterate on.
 
-### Leap Years
+### Leap Years
 
 Write an app that will take a number and tell you if it's a leap year.
 
