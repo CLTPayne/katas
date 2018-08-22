@@ -24,4 +24,25 @@ describe LeapYear do
 
   end
 
+  describe "#greeting" do
+
+    it "asks a user to enter a year" do
+      expect(leap_year.greeting).to eq("Hello. Please enter a year: ")
+    end
+
+  end
+
+  describe "#user_input" do
+
+    before(:each) do
+      allow(leap_year).to receive(:gets).and_return(2000)
+    end
+
+    it "accepts a user input" do
+      leap_year.user_input
+      expect(leap_year.requested_year).to eq(2000)
+    end
+
+  end
+
 end

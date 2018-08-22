@@ -1,6 +1,9 @@
 class LeapYear
 
+  attr_accessor :requested_year
+
   def initialize
+    @requested_year = ""
   end
 
   def calculate(num)
@@ -9,6 +12,14 @@ class LeapYear
     elsif !is_divisible_by_4?(num) || is_divisible_by_100?(num) && !is_divisible_by_400?(num)
       "No! Sorry, no extra day for you!"
     end
+  end
+
+  def greeting
+    return "Hello. Please enter a year: "
+  end
+
+  def user_input
+    @requested_year = gets.to_i
   end
 
   private
