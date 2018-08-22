@@ -45,4 +45,18 @@ describe LeapYear do
 
   end
 
+  describe "#interface" do
+
+    it "calculates a whether a user input of 2000 is a leap year" do
+      allow(leap_year).to receive(:gets).and_return(2000)
+      expect(leap_year.interface).to eq("Yes that's a leap year! Enjoy Feb 29th!")
+    end
+
+    it "calculates a whether a user input of 1900 is not a leap year" do
+      allow(leap_year).to receive(:gets).and_return(1900)
+      expect(leap_year.interface).to eq("No! Sorry, no extra day for you!")
+    end
+
+  end
+
 end

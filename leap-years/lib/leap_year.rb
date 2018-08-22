@@ -14,6 +14,12 @@ class LeapYear
     end
   end
 
+  def interface
+    greeting
+    user_input
+    calculate(@requested_year)
+  end
+
   def greeting
     return "Hello. Please enter a year: "
   end
